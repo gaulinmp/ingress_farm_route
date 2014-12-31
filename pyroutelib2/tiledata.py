@@ -44,7 +44,7 @@ def GetOsmTileData(z,x,y):
   
   if(z == DownloadLevel()):
     # Download the data
-    URL = 'http://dev.openstreetmap.org/~ojw/api/?/map/%d/%d/%d' % (z,x,y)
+    URL = 'http://api.openstreetmap.org/api/?/map/%d/%d/%d' % (z,x,y)
      
     if(not os.path.exists(filename)): # TODO: allow expiry of old data
       urlretrieve(URL, filename)
